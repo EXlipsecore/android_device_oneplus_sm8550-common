@@ -4,8 +4,6 @@ aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 audio.deep_buffer.media=true
 audio.offload.video=true
-audio.sys.offload.pstimeout.secs=3
-audio.sys.noisy.broadcast.delay=600
 persist.vendor.audio.spf_restart=true
 ro.af.client_heap_size_kbyte=7168
 ro.audio.flinger_standbytime_ms=2000
@@ -64,7 +62,6 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
-vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
 # Chipset
 ro.soc.manufacturer=QTI
@@ -111,16 +108,16 @@ vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
-debug.sf.disable_client_composition_cache=0
+debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=13666666
 debug.sf.early.sf.duration=15666666
 debug.sf.earlyGl.app.duration=13666666
 debug.sf.earlyGl.sf.duration=15666666
 debug.sf.enable_advanced_sf_phase_offset=1
-debug.sf.enable_gl_backpressure=1
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
-debug.sf.latch_unsignaled=1
+debug.sf.latch_unsignaled=0
 debug.sf.late.app.duration=13666666
 debug.sf.late.sf.duration=15666666
 debug.sf.treat_170m_as_sRGB=1
@@ -191,3 +188,8 @@ wifi.aware.interface=wifi-aware0
 
 # Zygote
 zygote.critical_window.minute=10
+
+ro.usb.uvc.enabled=false
+debug.sf.disable_backpressure=1
+persist.sys.sf.native_mode=259
+ro.surface_flinger.enable_frame_rate_override=false
